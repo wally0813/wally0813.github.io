@@ -421,17 +421,11 @@ w.interactive()
 reference
 
 https://dhavalkapil.com/blogs/FILE-Structure-Exploitation/
-
 https://www.lazenca.net/display/TEC/House+of+Orange
-
 http://tech.c2w2m2.com/pwn/house-of-orange/
-
 http://newbiepwn.tistory.com/148
-
 http://say2.tistory.com/entry/HITCON-CTF-Qual-2016house-of-orange
-
 http://4ngelboy.blogspot.com/2016/10/hitcon-ctf-qual-2016-house-of-orange.html
-
 https://1ce0ear.github.io/2017/11/26/study-house-of-orange/ 
 
                  
