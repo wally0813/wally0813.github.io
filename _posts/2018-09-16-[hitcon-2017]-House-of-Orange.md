@@ -9,8 +9,6 @@ tags:
 - Unsortedbin attack
 ---
 
-# [hitcon 2017] House of Orange
-
 ```
 +++++++++++++++++++++++++++++++++++++
 @          House of Orange          @
