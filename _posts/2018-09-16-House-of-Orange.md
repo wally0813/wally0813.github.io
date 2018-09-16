@@ -44,14 +44,12 @@ FORTIFY:  Enabled
 
 
 
+
 ### Top chunk Free
 
 바이너리를 보면 malloc만 있고, free 가 없다. 강제로 free를 만들어 줘야 한다.
-
 _int_malloc() 에 요청한 size가 top chunk size보다 크면 
-
 sysmalloc() 에서 _int_free() 함수를 호출해 top chunk 영역이 free 되고 top chunk 를 새로 만든다.
-
 free된 top chunk 는 top chunk - 0x10 영역이 unsorted bin에 등록된다.
 
 	
