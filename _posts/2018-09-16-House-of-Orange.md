@@ -2,14 +2,14 @@
 title: House of Orange
 date: 2018-09-16 14:19:53
 categories:
-- File Stream Oriented Programming
-- Unsortedbin attack
+- Heap Exploit
 tags:
 - House Of Orange
 - File Stream Oriented Programming
 - Unsortedbin attack
 ---
 
+# [hitcon 2017] House of Orange
 
 ```
 +++++++++++++++++++++++++++++++++++++
@@ -63,7 +63,6 @@ free된 top chunk 는 top chunk - 0x10 영역이 unsorted bin에 등록된다.
 #### 조건 
 
 malloc.c 2393 -2404
-
 ```c
   /*
      If not the first time through, we require old_size to be
@@ -81,13 +80,9 @@ malloc.c 2393 -2404
 ```
 
 top chunk + 요청 size 는 페이지 정렬이 되어야 한다.
-
 top chunk 에 prev_inuse bit이 설정되어야 한다.
-
 MINSIZE(0x10) <= 요청 size < 정렬된(?) 요청 size+MINSIZE
-
 ex) top chunk size = 0x20bc1 => fake_size = 0xbc1
-
 요청한 크기는 mmap size 보다 작아야 한다.
 
 
@@ -114,7 +109,6 @@ all: 0x55e2564a8480 —▸ 0x7ff4ce37cb78 (main_arena+88) ◂— 0x55e2564a8480
 ### Libc, heap Leak
 
 large chunk(512 bytes 이상) 를 할당하면 main_arena 주소와 heap 영역 모두 leak 할 수 있다.
-
 large bin은 다른 bin과 다르게 연결리스트의 크기를 관리하기 때문에 추가적인 연결리스트를 가진다.
 
 
@@ -135,23 +129,17 @@ large bin은 다른 bin과 다르게 연결리스트의 크기를 관리하기 �
 
 
 libc 에서 File structure 는 single linked list 로 관리 되는데, (_IO_list_all -> stderr -> stdout -> stdin)
-
 _IO_list_all 가 이 structure의 head를 저장하고 있고,
-
 각 structure들은 struct _IO_FILE *_chain 에 의해 연결된다. 
 
 자세한 사항은 
 
-[Play with File Structure]: https://www.slideshare.net/AngelBoy1/play-with-file-structure-yet-another-binary-exploit-technique
-
- 여기에 잘 정리되어 있다.
+https://www.slideshare.net/AngelBoy1/play-with-file-structure-yet-another-binary-exploit-technique 여기에 잘 정리되어 있다.
 
 
 
 이 _IO_list_all이 우리가 만든 file structure을 참조하게 하기위해 unsortedbin attack으로 주소를 덮어야 한다. 
-
 우리는 free 된 top chunk의 bk에 &_IO_list_all+0x10를 넣어 _IO_list_all에 &main_arena+88이 들어가게 할 것 이다.
-
 &main_arena+88를 기준으로 _chain이 되는 주소에 맞는 사이즈의 chunk로 top chunk의 사이즈를 변경하여 _chain을 우리가 원하는 주소로 바꾼다. (small_bin[4] 자리)
 
 
@@ -192,7 +180,6 @@ glibc 가 memory corruption을 감지하였을 때 루틴
  
 
 genops.c _IO_flush_all_lockp() 830-860
-
 ```c
   last_stamp = _IO_list_all_stamp;
   fp = (_IO_FILE *) _IO_list_all;
@@ -228,21 +215,15 @@ genops.c _IO_flush_all_lockp() 830-860
 ```
 
 fp 가 NULL일 때 까지 fp->chain을 참조하는 while 문이다.
-
 여기서  
-
 _IO_vtable_offset (fp) == 0_ ( libioP.h default=0 )
-
 _fp->_mode > 0 
-
 _fp->_wide_data->_IO_write_ptr > fp->_wide_data->_IO_write_base
-
 를 만족하면 _IO_OVERFLOW (fp, EOF) 를 호출하는데, 이 _IO_OVERFLOW 또한 file structure 에 저장되어 있다.
 
 
 
 libioP.h 336-340
-
 ```c
 struct _IO_FILE_plus
 {
@@ -258,7 +239,6 @@ file structure의 기본 구조이다.
 
 
 libioP.h 299-309
-
 ```c
 struct _IO_jump_t
 {
@@ -282,7 +262,6 @@ _IO_overflow_t 에 _IO_OVERFLOW 함수의 주소 값을 저장하고 있다. 여
 이제 함수를 호출하기 위한 조건만 맞춰주면 된다.
 
 libio.h 253-320
-
 ```c
 struct _IO_FILE {
   int _flags;		/* High-order word is _IO_MAGIC; rest is flags. */
@@ -310,7 +289,6 @@ struct _IO_FILE {
 
 
 libio.h 227-250
-
 ```c
 struct _IO_wide_data
 {
