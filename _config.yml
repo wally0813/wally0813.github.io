@@ -233,7 +233,8 @@ social_icons:
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
-#avatar:
+avatar: /assets/images/whereswally.jpg	
+
 
 
 # Table Of Contents in the Sidebar
