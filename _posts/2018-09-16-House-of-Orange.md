@@ -1,5 +1,5 @@
 ---
-title: [hitcon 2017] House of Orange
+title: hitcon 2017 - House of Orange
 date: 2018-09-16 14:19:53
 categories:
 - Heap Exploit
