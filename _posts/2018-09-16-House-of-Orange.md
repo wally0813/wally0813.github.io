@@ -212,11 +212,14 @@ genops.c _IO_flush_all_lockp() 830-860
     }
 ```
 
-fp 가 NULL일 때 까지 fp->chain을 참조하는 while 문이다.
-여기서  
+fp 가 NULL일 때 까지 fp->chain을 참조하는 while 문이다.  
+
 	_IO_vtable_offset (fp) == 0_ ( libioP.h default=0 )
+	
 	_fp->_mode > 0 
+	
 	_fp->_wide_data->_IO_write_ptr > fp->_wide_data->_IO_write_base
+	
 를 만족하면 _IO_OVERFLOW (fp, EOF) 를 호출하는데, 이 _IO_OVERFLOW 또한 file structure 에 저장되어 있다.
 
 
