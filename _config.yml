@@ -5,7 +5,7 @@
 
 # Site
 title: WALLY0813
-subtitle:
+subtitle: wally's hacking blog
 description:
 author: WALLY0813
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
@@ -226,7 +226,7 @@ social_icons:
   enable: true
   # Icon Mappings.
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
-  GitHub: github
+  GitHub: https://github.com/wally0813
   Twitter: twitter
   Weibo: weibo
 
