@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://wally0813.github.io/sitemap.xml
