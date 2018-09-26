@@ -7,7 +7,7 @@ tags:
 - C++ Reversing
 ---
 
-# C++ Reversing Basic
+
 
 
 
