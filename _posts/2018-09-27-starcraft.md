@@ -1,6 +1,6 @@
 ---
 title: C++ Reversing Basic for Pwnable
-date: 2018-09-27 14:19:53
+date: 2018-09-27 01:19:53
 categories:
 - C++ Exploit
 tags:
