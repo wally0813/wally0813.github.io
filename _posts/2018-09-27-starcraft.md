@@ -51,7 +51,8 @@ struct unit_mem{
     __int32 hp;
     __int32 weapon;
     __int32 armor;
-    char unit_name[264];
+    __int64 name_p;
+    char unit_name[256];
 }
 
 struct unit_vtable{
@@ -114,5 +115,5 @@ struct arcon_vtable{
 arcon은 templar를 상속하진 않는데 templar 에 의해 생긴다.
 
 
+![star](https://user-images.githubusercontent.com/36659181/46216492-ad8e2300-c37a-11e8-85b1-449370fb3fa7.PNG)
 
-취약점 찾았으니 익스하러 가야지
