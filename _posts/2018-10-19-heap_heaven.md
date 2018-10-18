@@ -1,5 +1,5 @@
 ---
-title: hack.lu 2018 - heap heaven 2
+title: hack.lu 2018 CTF - heap heaven 2
 date: 2018-10-19 - 01:19:53
 categories:
 - Heap Exploit
