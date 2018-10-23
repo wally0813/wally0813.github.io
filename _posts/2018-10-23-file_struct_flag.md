@@ -313,3 +313,5 @@ new_do_write (FILE *fp, const char *data, size_t to_do)
 _IO_do_write(fp, 0x00007ffff7dd0700, 0x00007ffff7dd07e3- 0x00007ffff7dd0700) 
 
 _IO_do_write(fp, 0x00007ffff7dd0700, 0xe3) 이렇게 릭됨!
+
+puts 호출 후 엔 flag 다시 되돌려 놓는다.
