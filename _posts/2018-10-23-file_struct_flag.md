@@ -1,6 +1,6 @@
 ---
 title: Memory leak using File struct flag
-date: 2018-10-23 14:19:53
+date: 2018-10-23 18:19:53
 categories:
 - Exploit Tech
 - CTF write up
