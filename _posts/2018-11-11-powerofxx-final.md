@@ -16,13 +16,13 @@ tags:
 
 대회 내내 내 땡깡 들어주고 리버싱이랑 포렌식 열심히 풀어준 팀원들에게도 너무 감사하다:)
 
-</br></br>
+<br/><br/>
 
 ![kakaotalk_20181108_220114097](https://user-images.githubusercontent.com/36659181/48307912-8d1ccf80-e59a-11e8-98bb-4591ab70513c.jpg)
 
 대회 중 찍힌 사진ㅋㅋㅋ 중간에 점심 밥도 주셨는데 정신없이 푸느라 못 먹었다.. 
 
-</br></br>
+<br/><br/>
 
 ![kakaotalk_20181109_174302217](https://user-images.githubusercontent.com/36659181/48307972-2bf5fb80-e59c-11e8-8b85-17c1731e26ee.jpg)
 
