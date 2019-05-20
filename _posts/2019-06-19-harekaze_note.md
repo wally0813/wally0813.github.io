@@ -21,7 +21,7 @@ Choice:
 
 계속 워게임을 풀고 있기도 하고,, 요즘 ctf에서 부진한 성적ㅠ 때문에 글을 안쓰다가 다시 쓴다
 
-Glibc 2.29 에서 tcache poisoing 이다.
+Glibc 2.29 에서 tcache poisoning 이다.
 
 2.29 는 처음이라 신기했당
 
